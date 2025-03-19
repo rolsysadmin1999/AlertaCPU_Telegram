@@ -1,0 +1,75 @@
+# Manual de Uso del Bot de Alertas de Servidores
+
+## Requisitos Previos
+
+1. **Python**: Asegúrate de tener Python instalado en tu sistema. Puedes descargarlo desde [python.org](https://www.python.org/downloads/).
+2. **Librerías Necesarias**: Instala las siguientes librerías de Python utilizando `pip`:
+    ```sh
+    pip install psutil telegram asyncio
+    ```
+
+## Descripción del Programa
+
+Este programa es un bot de alertas que monitorea el uso de CPU, RAM y espacio en discos de un servidor. Envía alertas a través de Telegram cuando se detecta un uso elevado de estos recursos.
+
+## Instrucciones de Uso
+
+### 1. Configuración Inicial
+
+1. **Abrir el Archivo**: Abre el archivo alerta_cpu.py en tu editor de código preferido (por ejemplo, Visual Studio Code).
+2. **Configurar el Token del Bot de Telegram**: Asegúrate de tener un bot de Telegram y su token. Puedes crear un bot y obtener el token siguiendo las instrucciones de [BotFather](https://core.telegram.org/bots#botfather).
+
+### 2. Ejecutar el Programa
+
+1. **Ejecutar el Script**: Abre una terminal en la carpeta donde se encuentra el archivo alerta_cpu.py y ejecuta el siguiente comando:
+    ```sh
+    python alerta_cpu.py
+    ```
+
+### 3. Uso de la Interfaz Gráfica
+
+1. **Abrir la Interfaz**: Al ejecutar el script, se abrirá una ventana con la interfaz gráfica del bot de alertas.
+2. **Seleccionar la Opción de Monitoreo**: En la ventana principal, selecciona una de las opciones de monitoreo:
+    - Monitorear uso de CPU
+    - Monitorear uso de RAM
+    - Monitorear espacio en discos
+
+3. **Ingresar Información Necesaria**:
+    - **IDs del Chat**: Ingresa los IDs de los chats de Telegram a los que se enviarán las alertas, separados por comas.
+    - **Token del Bot**: Ingresa el token del bot de Telegram.
+    - **Umbral de CPU (%)**: Si seleccionaste monitorear el uso de CPU, ingresa el umbral de uso de CPU en porcentaje.
+
+4. **Iniciar Monitorización**:
+    - Haz clic en el botón `Iniciar Monitorización` para comenzar a monitorear los recursos seleccionados.
+    - La etiqueta en la parte inferior de la ventana mostrará qué recursos se están monitoreando.
+
+5. **Detener Monitorización**:
+    - Haz clic en el botón `Detener Monitorización` para detener la monitorización de los recursos.
+    - La etiqueta en la parte inferior de la ventana se actualizará para indicar que no se está monitoreando nada.
+
+6. **Volver al Menú Principal**:
+    - Haz clic en el botón `Volver al Inicio` para regresar al menú principal y seleccionar otra opción de monitoreo.
+
+### 4. Logs y Alertas
+
+- **Logs**: Los eventos y alertas se registran en el archivo monitoreo.log en la misma carpeta donde se encuentra el script.
+- **Alertas**: Las alertas se envían a los chats de Telegram especificados cuando se detecta un uso elevado de los recursos monitoreados.
+
+## Ejemplo de Uso
+
+1. **Seleccionar Monitorear uso de CPU**:
+    - Ingresa los IDs del chat: `123456789,987654321`
+    - Ingresa el token del bot: `123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11`
+    - Ingresa el umbral de CPU: `80`
+    - Haz clic en `Iniciar Monitorización`.
+
+2. **Recibir Alertas**:
+    - Si el uso de CPU supera el 80%, se enviará una alerta a los chats de Telegram especificados.
+
+3. **Detener Monitorización**:
+    - Haz clic en `Detener Monitorización` para detener la monitorización.
+
+## Notas Adicionales
+
+- Asegúrate de que el bot de Telegram tenga permisos para enviar mensajes a los chats especificados.
+- Puedes monitorear múltiples recursos al mismo tiempo seleccionando una opción, iniciando la monitorización, y luego seleccionando otra opción y repitiendo el proceso.

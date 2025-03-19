@@ -1,0 +1,40 @@
+Bot de Alertas de Servidores
+
+
+Requisitos Previos
+Python: Asegúrate de tener Python instalado en tu sistema. Puedes descargarlo desde python.org.
+Librerías Necesarias: Instala las siguientes librerías de Python utilizando pip:
+Descripción del Programa
+Este programa es un bot de alertas que monitorea el uso de CPU, RAM y espacio en discos de un servidor. Envía alertas a través de Telegram cuando se detecta un uso elevado de estos recursos.
+
+Estructura del Código
+Importaciones y Configuración Inicial
+El código comienza con la importación de las librerías necesarias y la configuración del logging:
+
+Variables Globales
+Se definen variables globales para controlar la monitorización y el envío de alertas:
+
+Función para Enviar Alertas
+La función enviar_alerta envía un mensaje de alerta a los chat IDs especificados:
+
+Función para Obtener Información del Sistema
+La función obtener_info_sistema obtiene información sobre el uso de CPU, RAM y discos:
+
+Función para Monitorizar Recursos
+La función monitorizar_cpu monitorea los recursos especificados y envía alertas cuando se superan los umbrales:
+
+Función para Iniciar la Monitorización
+La función iniciar_monitorizacion inicia la monitorización en un hilo separado:
+
+Función para Detener la Monitorización
+La función detener_monitorizacion_func detiene la monitorización:
+
+Función para Mostrar los Campos de Entrada
+La función mostrar_campos_entrada muestra los campos de entrada necesarios según la opción seleccionada:
+
+Función para Volver al Menú Principal
+La función volver_menu_principal permite regresar al menú principal:
+
+Creación de la Interfaz Gráfica
+Se crea la interfaz gráfica utilizando Tkinter:
+
